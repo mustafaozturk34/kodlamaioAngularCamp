@@ -1,0 +1,106 @@
+<h1>Araba Güncelle</h1>
+<form style="margin-top: 50px" [formGroup]="carUpdateForm" (ngSubmit)="updateCar()">
+  <h6>Günlük Fiyat</h6>
+  <div class="form-group">
+    <input
+      style="margin-top: 15px"
+      type="number"
+      id="dailyPrice"
+      formControlName="dailyPrice"
+      class="form-control"
+      [(ngModel)]="selectedCar.dailyPrice"
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+      carUpdateForm.get('dailyPrice').hasError('required') &&
+      carUpdateForm.get('dailyPrice').dirty
+      "
+    >
+      Günlük fiyat girmek zorunludur
+    </div>
+  </div>
+  <h6>Image</h6>
+  <div class="form-group">
+    <input
+      style="margin-top: 15px"
+      type="text"
+      id="imageUrl"
+      formControlName="imageUrl"
+      class="form-control"
+      placeholder="Image Url"
+      [(ngModel)]="selectedCar.imageUrl"
+
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+      carUpdateForm.get('imageUrl').hasError('required') &&
+      carUpdateForm.get('imageUrl').dirty
+      "
+    >
+      Image girmek zorunludur
+    </div>
+  </div>
+  <h6>Model</h6>
+  <div class="form-group">
+    <input
+      style="margin-top: 15px"
+      type="text"
+      id="description"
+      formControlName="description"
+      class="form-control"
+      placeholder="Model giriniz"
+      [(ngModel)]="selectedCar.description"
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+      carUpdateForm.get('description').hasError('required') &&
+      carUpdateForm.get('description').dirty
+      "
+    >
+      Model girmek zorunludur
+    </div>
+  </div>
+  <h6>Renk</h6>
+  <div class="form-group">
+    <select
+      style="margin-top: 15px"
+      class="form-control"
+      required
+      name="colorName"
+      id="colorName"
+      formControlName="colorName"
+      [(ngModel)]="selectedCar.colorName"
+    >
+      <option *ngFor="let color of colors" [value]="color.name" >
+        {{ color.name }}
+      </option>
+    </select>
+  </div>
+  <h6>Marka</h6>
+  <div style="margin-top: 15px" class="form-group">
+    <select
+      class="form-control"
+      required
+      name="brandName"
+      id="brandName"
+      formControlName="brandName"
+      [(ngModel)]="selectedCar.brandName"
+    >
+      <option *ngFor="let brand of brands" [value]="brand.name">
+        {{ brand.name }}
+      </option>
+    </select>
+  </div>
+  <button
+    [disabled]="carUpdateForm.invalid"
+    style="margin-top: 15px"
+    type="submit"
+    class="btn btn-primary"
+  >
+    Ekle
+  </button>
+  <p-toast></p-toast>
+</form>

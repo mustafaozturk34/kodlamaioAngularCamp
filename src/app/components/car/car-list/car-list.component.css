@@ -1,0 +1,12 @@
+.car-cards{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+.car-card{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

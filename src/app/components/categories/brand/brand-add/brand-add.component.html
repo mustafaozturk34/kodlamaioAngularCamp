@@ -1,0 +1,13 @@
+<h3>Add to Brand</h3>
+<form [formGroup]="brandAddForm" (ngSubmit)= "add()">
+    <div class="form-group">
+        <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Brand Name">
+        <div class="alert alert-danger" *ngIf= "brandAddForm.get('name').hasError('required') && brandAddForm.get('name').dirty">Brand Name is required.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" id="logo" name="logo" formControlName="logo" class="form-control" placeholder="Brand Logo">
+        <div class="alert alert-danger" *ngIf= "brandAddForm.get('logo').hasError('required') && brandAddForm.get('logo').dirty">Brand logo is required.</div>
+    </div>
+    <p-toast></p-toast>
+    <button type="submit" class="btn btn-primary" [disabled]= "brandAddForm.invalid">Add Brand</button>
+</form>

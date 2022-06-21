@@ -1,0 +1,11 @@
+<ul class="list-group">
+  <li class="list-group-item active" aria-current="true">Brands <button routerLink="brand-add">Ekle</button></li>
+  <li class="list-group-item" *ngFor="let brand of brands">
+    <img src="{{ brand.logo }}" class="logo-image" /> {{ brand.name }}
+    <div class="brand-buttons">
+        <a href="#" routerLink="brand-update/{{brand.id}}"><i class="pi pi-pencil"></i></a>
+        <a href="#" (click)="deleteBrand(brand.id)"><i class="pi pi-times-circle"></i></a>
+    </div>
+    <p-toast></p-toast>
+  </li>
+</ul>

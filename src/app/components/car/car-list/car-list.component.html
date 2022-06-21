@@ -1,0 +1,18 @@
+<button class="btn btn-success" routerLink="add-car">Add new car</button>
+<div class="car-cards">
+  <p-card
+    class="car-card"
+    *ngFor="let car of cars"
+    header="{{ car.description }}"
+    subheader="{{ car.brandName }}"
+    [style]="{ width: '300px' }"
+    styleClass="p-card-shadow"
+  >
+    <ng-template pTemplate="header">
+      <img alt="Card" src="{{ car.imageUrl }}" />
+    </ng-template>
+    <button routerLink="/update-car/{{car.id}}" class="btn btn-success">Update</button>
+    <button (click)="deleteCar(car.id)" class="btn btn-danger">Delete</button>
+    <p-toast></p-toast>
+  </p-card>
+</div>

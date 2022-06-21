@@ -1,0 +1,23 @@
+.logo-image {
+    width: 16px;
+    height: 16px;
+}
+
+.pi-times-circle::before{
+    font-size: 0.75rem;
+    color: red;
+    
+}
+.pi-pencil{
+    font-size: 0.75rem;
+    color: green;
+    margin-right: 7.5px;
+}
+
+.brand-buttons{
+    position:absolute;
+    top:1.5px;
+    right:1.5px;
+}
+
+
