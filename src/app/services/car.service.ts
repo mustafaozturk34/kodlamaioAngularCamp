@@ -30,4 +30,12 @@ export class CarService {
   getCarById(id: number):Observable<Car>{
     return this.httpClient.get<Car>("http://localhost:3000/Cars/"+id)
   }
+
+  getCarsByBrandId(id:number):Observable<Car[]>{
+    return this.httpClient.get<Car[]>("http://localhost:3000/Cars?brandId="+id)
+  }
+
+  getCarsByColorId(id:number):Observable<Car[]>{
+    return this.httpClient.get<Car[]>("http://localhost:3000/Cars?colorId="+id)
+  }
 }

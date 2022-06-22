@@ -77,6 +77,7 @@ export class CarUpdateComponent implements OnInit {
     let selectedColor = this.colors.find(
       (element) => element.name == this.carUpdateForm.value.colorName
     );
+    this.car.id = this.selectedCar.id
     this.car.brandId = selectedBrand.id;
     this.car.colorId = selectedColor.id;
     this.car.brandName = this.carUpdateForm.value.brandName;
@@ -84,6 +85,7 @@ export class CarUpdateComponent implements OnInit {
     this.car.dailyPrice = this.carUpdateForm.value.dailyPrice;
     this.car.imageUrl = this.carUpdateForm.value.imageUrl;
     this.car.description = this.carUpdateForm.value.description;
+    console.log(this.car)
     this.carService.updateCar(this.car).subscribe((data) => {
       this.messageService.add({
         severity: 'success',

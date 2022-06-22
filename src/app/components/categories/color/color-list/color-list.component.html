@@ -8,6 +8,7 @@
       <button
         class="color-button"
         style="background-color:{{ color.name }}"
+        routerLink="car-colorId/{{color.id}}"
       ></button>
       <a href="#" (click)="deleteColor(color.id)"
         ><i class="pi pi-times-circle"></i

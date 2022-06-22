@@ -2,7 +2,6 @@ import { MessageService } from 'primeng/api';
 import { BrandService } from '../../../../services/brand.service';
 import { Component, OnInit } from '@angular/core';
 import { Brand } from 'src/app/models/brand';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-brand-list',
@@ -15,7 +14,7 @@ export class BrandListComponent implements OnInit {
 
   constructor(
     private brandService: BrandService,
-    private messageService: MessageService
+    private messageService: MessageService,
   ) {}
 
   ngOnInit(): void {
@@ -42,4 +41,5 @@ export class BrandListComponent implements OnInit {
       }, 1000);
     }
   }
+
 }

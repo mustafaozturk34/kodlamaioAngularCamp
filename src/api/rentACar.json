@@ -88,12 +88,12 @@
     {
       "id": 3,
       "brandId": 1,
-      "colorId": 2,
-      "colorName": "red",
+      "colorId": 8,
       "brandName": "Volkswagen",
-      "dailyPrice": 400,
-      "imageUrl": "../assets/brand/bmw.png",
-      "description": "Audi A7"
+      "colorName": "pink",
+      "dailyPrice": 1500,
+      "imageUrl": "asdfsf",
+      "description": "sadadas"
     },
     {
       "id": 4,
@@ -107,23 +107,13 @@
     },
     {
       "id": 5,
-      "brandId": 1,
-      "colorId": 2,
-      "colorName": "red",
-      "brandName": "Volkswagen",
-      "dailyPrice": 400,
-      "imageUrl": "../assets/brand/bmw.png",
-      "description": "Audi A7"
-    },
-    {
-      "id": 6,
-      "brandId": 1,
-      "colorId": 2,
-      "colorName": "red",
-      "brandName": "Volkswagen",
-      "dailyPrice": 400,
-      "imageUrl": "../assets/brand/bmw.png",
-      "description": "Audi A7"
+      "brandId": 5,
+      "colorId": 8,
+      "brandName": "Porsche",
+      "colorName": "pink",
+      "dailyPrice": 15000,
+      "imageUrl": "asdfsf",
+      "description": "sadadas"
     },
     {
       "brandId": 3,
